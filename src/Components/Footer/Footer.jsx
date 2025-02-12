@@ -10,7 +10,8 @@ import GoogleStore from "../../assets/imgs/google-store.svg";
 function Footer() {
   return (
     <footer className="w-full bg-gray-100 dark:bg-gray-900 dark:text-white border-t border-gray-200 dark:border-gray-700 mt-10">
-      <div className="container px-6 lg:px-10 py-12">
+      <div className="container mx-auto px-6 lg:px-10 py-12">
+        
         {/* App Download Section */}
         <div className="text-center lg:text-left">
           <h2 className="text-3xl font-semibold text-gray-800 dark:text-white">
@@ -44,14 +45,24 @@ function Footer() {
           <div className="flex flex-wrap items-center gap-4">
             <span className="font-medium text-lg text-gray-800 dark:text-white">Payment Partners:</span>
             {[AmazonLogo, AmericanExpress, MasterCard, PayPal, Visa].map((logo, index) => (
-              <img key={index} src={logo} alt="Payment Method" className="w-[80px] h-[50px] object-contain opacity-80 hover:opacity-100 transition-opacity" />
+              <img 
+                key={index} 
+                src={logo} 
+                alt="Payment Method" 
+                className="w-[80px] h-[50px] object-contain opacity-80 hover:opacity-100 transition-opacity" 
+              />
             ))}
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
             <span className="font-medium text-lg text-gray-800 dark:text-white">Get deliveries with FreshCart:</span>
             {[AppStore, GoogleStore].map((logo, index) => (
-              <img key={index} src={logo} alt="App Store" className="w-[200px] h-[100px] object-contain opacity-90 hover:opacity-100 transition-opacity" />
+              <img 
+                key={index} 
+                src={logo} 
+                alt="App Store" 
+                className="w-[200px] h-[150px] object-contain opacity-90 hover:opacity-100 transition-opacity" 
+              />
             ))}
           </div>
         </div>
@@ -63,11 +74,19 @@ function Footer() {
         <div className="text-center text-lg font-medium text-gray-800 dark:text-white mb-3">
           You can find us:
         </div>
-        <div className="flex justify-center gap-6 mb-4">
-          <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 text-2xl"><FaFacebook /></a>
-          <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-blue-400 dark:hover:text-blue-300 text-2xl"><FaTwitter /></a>
-          <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-pink-500 dark:hover:text-pink-400 text-2xl"><FaInstagram /></a>
-          <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 text-2xl"><FaLinkedin /></a>
+        <div className="flex justify-center items-center flex-nowrap gap-6 mb-4">
+          <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 text-3xl">
+            <FaFacebook />
+          </a>
+          <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-blue-400 dark:hover:text-blue-300 text-3xl">
+            <FaTwitter />
+          </a>
+          <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-pink-500 dark:hover:text-pink-400 text-3xl">
+            <FaInstagram />
+          </a>
+          <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 text-3xl">
+            <FaLinkedin />
+          </a>
         </div>
 
         {/* Footer Copyright */}
