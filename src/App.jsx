@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
@@ -27,7 +27,7 @@ import { Offline, Online } from 'react-detect-offline';
 import Profile from './Components/Profile/Profile';
 
 function App() {
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
 
       path: '', element: <Layout />, children: [

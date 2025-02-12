@@ -9,8 +9,8 @@ import GoogleStore from "../../assets/imgs/google-store.svg";
 
 function Footer() {
   return (
-    <footer className="bg-gray-100 dark:bg-gray-900 dark:text-white border-t border-gray-200 dark:border-gray-700 mt-10">
-      <div className="container mx-auto px-6 lg:px-10 py-12">
+    <footer className="w-full bg-gray-100 dark:bg-gray-900 dark:text-white border-t border-gray-200 dark:border-gray-700 mt-10">
+      <div className="container px-6 lg:px-10 py-12">
         {/* App Download Section */}
         <div className="text-center lg:text-left">
           <h2 className="text-3xl font-semibold text-gray-800 dark:text-white">
@@ -51,7 +51,7 @@ function Footer() {
           <div className="flex flex-wrap items-center gap-4">
             <span className="font-medium text-lg text-gray-800 dark:text-white">Get deliveries with FreshCart:</span>
             {[AppStore, GoogleStore].map((logo, index) => (
-              <img key={index} src={logo} alt="App Store" className="w-[140px] h-[200px] object-contain opacity-80 hover:opacity-100 transition-opacity" />
+              <img key={index} src={logo} alt="App Store" className="w-[200px] h-[100px] object-contain opacity-90 hover:opacity-100 transition-opacity" />
             ))}
           </div>
         </div>
