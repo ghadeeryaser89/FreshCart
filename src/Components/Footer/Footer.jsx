@@ -14,9 +14,36 @@ function Footer() {
 
         {/* Payment, Download, and Share Link in One Row */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 text-center lg:text-left">
+
+           {/* Share Link Section */}
+           <div className="w-full lg:w-1/3">
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+              Get a Download Link
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 text-md mt-1">
+              Enter your email and we'll send you a link.
+            </p>
+            <form className="flex flex-col md:flex-row items-center gap-3 mt-3">
+              <input
+                type="email"
+                className="w-full md:w-2/3 p-3 rounded-lg border border-gray-300 bg-white dark:bg-gray-800 dark:border-gray-600 dark:text-white focus:ring-2 focus:ring-green-500 focus:outline-none"
+                placeholder="Enter your email"
+                required
+              />
+              <button
+                type="submit"
+                className="flex items-center gap-2 px-2 py-2 text-white bg-green-600 hover:bg-green-700 rounded-lg transition-all focus:ring-4 focus:ring-green-300 dark:focus:ring-green-800"
+              >
+                <FaShareAlt />
+                <span className="text-md font-medium">Send Link</span>
+              </button>
+            </form>
+          </div>
           
-          {/* Secure Payment Methods */}
-          <div className="w-full lg:w-1/3">
+
+         
+ {/* Secure Payment Methods */}
+ <div className="w-full lg:w-1/3">
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
               Secure Payments
             </h3>
@@ -41,9 +68,9 @@ function Footer() {
               </a>
             </div>
           </div>
-
-          {/* Download App Section */}
-          <div className="w-full lg:w-1/3">
+         
+ {/* Download App Section */}
+ <div className="w-full lg:w-1/3">
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
               Download the FreshCart App
             </h3>
@@ -59,32 +86,6 @@ function Footer() {
               </a>
             </div>
           </div>
-
-          {/* Share Link Section */}
-          <div className="w-full lg:w-1/3">
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
-              Get a Download Link
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-md mt-1">
-              Enter your email and we'll send you a link.
-            </p>
-            <form className="flex flex-col md:flex-row items-center gap-3 mt-3">
-              <input
-                type="email"
-                className="w-full md:w-2/3 p-3 rounded-lg border border-gray-300 bg-white dark:bg-gray-800 dark:border-gray-600 dark:text-white focus:ring-2 focus:ring-green-500 focus:outline-none"
-                placeholder="Enter your email"
-                required
-              />
-              <button
-                type="submit"
-                className="flex items-center gap-2 px-2 py-2 text-white bg-green-600 hover:bg-green-700 rounded-lg transition-all focus:ring-4 focus:ring-green-300 dark:focus:ring-green-800"
-              >
-                <FaShareAlt />
-                <span className="text-md font-medium">Send Link</span>
-              </button>
-            </form>
-          </div>
-
         </div>
 
         {/* Divider */}

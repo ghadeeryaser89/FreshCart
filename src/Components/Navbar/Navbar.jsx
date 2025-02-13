@@ -40,9 +40,16 @@ function Navbar() {
         </Link>
 
         {/* Mobile Menu Button */}
+        <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="text-2xl text-gray-800 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400 transition md:hidden"
+          >
+            {darkMode ? <FaSun /> : <FaMoon />}
+          </button>
         <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden text-2xl text-gray-800 dark:text-gray-300">
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
+        
 
         {/* Navigation Links */}
         <div className={`absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-white dark:bg-gray-900 md:flex items-center md:space-x-8 text-gray-900 dark:text-gray-300 text-lg font-medium p-6 md:p-0 shadow-md md:shadow-none transition-transform ${menuOpen ? "flex flex-col" : "hidden"}`}>
