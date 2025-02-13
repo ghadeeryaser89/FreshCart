@@ -7,8 +7,9 @@ import Register from './Components/Register/Register';
 import NotFound from './Components/NotFound/NotFound';
 import Brands from './Components/Brands/Brands';
 import Cart from './Components/Cart/Cart';
-import CheckOut from './Components/CheckOut/CheckOut'
+import CheckOut from './Components/CheckOut/CheckOut';
 import Categories from './Components/Categories/Categories';
+import SubCategories from './Components/SubCategories/SubCategories';
 import Layout from './Components/Layout/Layout';
 import UserContextProvider from './Context/UserContext';
 import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
@@ -23,13 +24,12 @@ import WishListContextProvider from './Context/WishListContext';
 import ForgetPassword from './Components/Password/ForgetPassword';
 import VerifyResetCode from './Components/Password/VerifyResetCode';
 import ResetPassword from './Components/Password/ResetPassword';
-import { Offline, Online } from 'react-detect-offline';
+import { Offline } from 'react-detect-offline';
 import Profile from './Components/Profile/Profile';
 
 function App() {
   const router = createHashRouter([
     {
-
       path: '', element: <Layout />, children: [
         { index: true, element: <ProtectedRoute><Home /></ProtectedRoute> },
         { path: "login", element: <Login /> },
@@ -46,7 +46,8 @@ function App() {
         { path: "cart", element: <ProtectedRoute><Cart /></ProtectedRoute> },
         { path: "wishlist", element: <ProtectedRoute><WishList /></ProtectedRoute> },
         { path: "categories", element: <ProtectedRoute><Categories /></ProtectedRoute> },
-        {path:"profile",element:<ProtectedRoute><Profile/></ProtectedRoute>},  
+        { path: "subcategories/:categoryId", element: <ProtectedRoute><SubCategories /></ProtectedRoute> },
+        { path:"profile", element:<ProtectedRoute><Profile/></ProtectedRoute> },  
         { path: "*", element: <NotFound /> },
       ]
     }
@@ -62,9 +63,9 @@ function App() {
             <WishListContextProvider>
               <RouterProvider router={router}></RouterProvider>
               <Offline>
-              <div className="fixed bottom-4 start-4 p-4 rounded-md bg-yellow-600 ">             
-               Only shown offline (surprise!)
-              </div>
+                <div className="fixed top-0 left-0 w-full p-4 text-center text-white bg-red-600">
+                  You are currently offline!
+                </div>
               </Offline>
             </WishListContextProvider>
           </CartContextProvider>
@@ -85,4 +86,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
